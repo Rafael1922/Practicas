@@ -1,0 +1,84 @@
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    perspective: 1000px;
+  }
+  
+  .cube-container {
+    width: 200px;
+    height: 200px;
+    perspective: 1000px;
+    user-select: none; /* Evita la selección de texto al arrastrar */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg) rotateY(45deg);
+    transition: transform 1s;
+  }
+  
+  .face {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Digital Clock", Arial, sans-serif;
+  }
+  
+  #faceHour {
+    background-color: #000;
+    color: #ffffff;
+    transform: translateZ(100px);
+  }
+  
+  #faceBottom {
+    background-color: #000;
+    color: #ffffff;
+    transform: rotateX(-90deg) translateZ(100px); /* Ajustar la rotación a -90 grados para la cara inferior */
+  }
+  
+  #faceSecond {
+    background-color: #000000; /* Cambia el color de fondo si es necesario */
+    color: #c95beb; /* Cambia el color del texto a rosa */
+    transform: rotateY(90deg) translateZ(100px); /* Ajusta la rotación y la posición según sea necesario */
+  }
+  
+  #faceRight {
+    display: none; /* Oculta la cara derecha */
+  }
+  
+  
+  #faceMinute {
+    background-color: #000;
+    color: #00ff00; /* Cambiar el color del texto a verde */
+    transform: rotateX(90deg) translateZ(100px);
+  }
+  
+  #faceBack {
+    background-color: #000;
+    transform: rotateY(180deg) translateZ(100px);
+  }
+  
+  #faceLeft {
+    background-color: #000;
+    color: #0000ff; /* Cambiar el color del texto a azul */
+    transform: rotateY(-90deg) translateZ(100px); /* Ajustar la rotación a -90 grados para la cara izquierda */
+  }
+  
+  #faceRight {
+    background-color: #000;
+    color: #ff00ff; /* Cambiar el color del texto a magenta */
+    transform: rotateY(90deg) translateZ(100px);
+  }
